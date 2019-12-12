@@ -1,0 +1,19 @@
+.mat-tab-group {
+  margin-bottom: 48px;
+}
+.product-form-container {
+  margin: 10px;
+  box-sizing: border-box;
+}
+table {
+  width: 90%;
+}
+.example-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.example-container > * {
+  width: 100%;
+}

@@ -1,0 +1,27 @@
+<div class="modal-image" *ngIf="product">
+  <h3>Chi tiết sản phẩm</h3>
+  <div class="thumbnail">
+  <div style="background: white;padding: 2% 2%;"><img src="{{product.image}}" style="width: 50%;height: auto;" />
+
+  </div>
+  </div>
+  <div class="card-body" style="background: white; width: 60%;">
+    <p
+      >
+      {{product.des}}</p>
+    <p class="card-text">{{product.name}}</p>
+    <div class=" d-flex justify-content-between" style="max-width: 80%;">
+      <a class="custom-select-lg">{{product.price| currency:'VND':true:'1.2-2'}}</a>
+      <a style="text-decoration: line-through; color:red;"
+         class="custom-select-lg">{{product.priceOld| currency:'VND':true:'1.2-2'}}</a>
+      <div class="btn-group">
+        <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addProduct(product)">Thêm vào
+          giỏ</button>
+      </div>
+      <small class="custom-select-lg text-muted">9 mins</small>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+    </div>
+  </div>
+</div>
+<a class="btn btn-primary btn-lg " [routerLink]="['/']">Trở lại trang chủ<span class="sr-only">(current)</span></a>

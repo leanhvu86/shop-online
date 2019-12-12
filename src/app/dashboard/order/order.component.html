@@ -1,0 +1,33 @@
+<h2>Order</h2>
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+    <tr>
+      <th>STT</th>
+      <th>Mã đơn hàng</th>
+      <th>Mã khách hàng</th>
+      <th>Số sản phẩm</th>
+      <th (click)="sort('name')">Tổng tiền thanh toán
+        <span class="glyphicon sort-icon" *ngIf="key =='name'" [ngClass]="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+      </th>
+      <th>Duyệt</th>
+    </tr>
+    </thead>
+
+    <tbody *ngFor="let order of orders | orderBy: key : reverse | paginate: { itemsPerPage: 5, currentPage: p };">
+    <tr>
+      <td></td>
+      <td><a class="nav-link active" routerLink="/dashboard/order-detail/{{order.id}}">{{order.id}}</a></td>
+      <td>{{order.customerId}}</td>
+      <td>{{order.quantity}}</td>
+      <td>{{order.total}}</td>
+      <td *ngIf="order.type==2">
+        <a (click)="accept(order)" style="color: gray; margin-right: 20px;"><i class="fa fa-check" aria-hidden="true"></i></a>
+        <a (click)="reject(order)" style="color: gray;"><i class="fa fa-ban" aria-hidden="true"></i></a>
+      </td>
+      <td *ngIf="order.type!=2">{{order.type == 0 ? 'Từ chối' : 'Duyệt' }} </td>
+    </tr>
+    </tbody>
+  </table>
+  <pagination-controls (pageChange)="p = $event"></pagination-controls>
+</div>

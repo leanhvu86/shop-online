@@ -1,0 +1,42 @@
+<div class="modal-image" *ngIf="product">
+
+  <h2>{{product.name | uppercase}}</h2>
+
+  <div height="40px;"><span>id: </span>{{product.id}}</div>
+  <table class="table table-striped table-sm">
+    <tr class="m-4">
+      <td height="40px;"><label>Tên sản phẩm: </label></td>
+      <td><input [(ngModel)]="product.name" placeholder="name" /></td>
+      <td></td>
+    </tr>
+    <tr class="m-4">
+      <td height="40px;"><label>Ảnh:</label></td>
+      <td height="40px;"><input [(ngModel)]="product.image" placeholder="price" /></td>
+      <td height="40px;"> <div style="background: white;padding: 2% 2%;">
+        <span style="color:red;" *ngIf="message">{{message}}</span>
+        <input #file type="file" accept='image/*' (change)="preview(file.files)" />
+        <img [src]="imgURL" height="30px"  *ngIf="imgURL">
+      </div></td>
+    </tr>
+    <tr class="m-4">
+      <td height="40px;"><label>Giá:</label></td>
+      <td height="40px;"><input [(ngModel)]="product.price" placeholder="price" type="number" /></td>
+      <td></td>
+    </tr>
+    <tr class="m-4">
+      <td height="40px;"><label>Giá cũ:</label></td>
+      <td height="40px;"><input [(ngModel)]="product.priceOld" placeholder="priceOld" type="number" /></td>
+      <td></td>
+    </tr>
+
+    <tr class="m-4">
+      <td > <label>Mô tả: </label></td>
+      <td ><textarea [(ngModel)]="product.des" placeholder="des" style="width: 180px;height: 100px;"></textarea></td>
+      <td></td>
+    </tr>
+
+  </table>
+  <button (click)="save()">save</button>
+  <button (click)="goBack()">go back</button>
+</div>
+<a class="nav-link" [routerLink]="['/dashboard']">Trở lại trang chủ<span class="sr-only">(current)</span></a>

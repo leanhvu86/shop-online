@@ -1,0 +1,52 @@
+{
+  "menu.category": "Danh mục",
+  "menu.category.user": "Quản lý người dùng",
+  "menu.Logout": "Đăng xuất",
+  "menu.banner": "Banner",
+  "menu.product": "Sản phẩm",
+  "login.username": "Tên đăng nhập",
+  "login.password": "Mật khẩu",
+  "login.login": "Đăng nhập",
+  "login.error": "Tên đăng nhập hoặc mật khẩu không đúng",
+
+  "btnAddEdit": "Cập nhật",
+  "btnAdd": "Thêm",
+  "btnEdit": "Sửa",
+  "btnDelete": "Xóa",
+  "btnSearch": "Tìm kiếm",
+
+  "MatPaginator.itemsPerPageLabel": "Số bản ghi trên trang",
+  "MatPaginator.nextPageLabel": "Trang tiếp",
+  "MatPaginator.previousPageLabel": "Trang trước",
+  "MatPaginator.range": "của",
+
+  "user.managerment": "Quản lý người dùng",
+  "user.managerment.search": "Tìm kiếm",
+  "user.managerment.search.hint": "Nhập để tìm kiếm",
+  "user.managerment.table.no": "STT",
+  "user.managerment.table.username": "Tên đăng nhập",
+  "user.managerment.table.firstname": "Họ",
+  "user.managerment.table.lastname": "Tên",
+  "user.managerment.add": "Thêm mới người dùng",
+  "user.managerment.edit": "Sửa người dùng",
+  "user.managerment.modal.username": "Tên đăng nhập",
+  "user.managerment.modal.username.empty": "Tên đăng nhập bắt buộc phải nhập",
+  "user.managerment.modal.username.pattern": "Tên đăng nhập không đúng định dạng",
+  "user.managerment.modal.firstname": "Họ",
+  "user.managerment.modal.firstname.empty": "Họ bắt buộc phải nhập",
+  "user.managerment.modal.firstname.pattern": "Họ không đúng định dạng",
+  "user.managerment.modal.lastname": "Tên",
+  "user.managerment.modal.lastname.empty": "Tên bắt buộc phải nhập",
+  "user.managerment.modal.lastname.pattern": "Tên không đúng định dạng",
+  "ld.no": "STT",
+  "ld.image": "Hình ảnh",
+
+  "bannerAlbum.ae.albumName": "Tên album",
+  "bannerAlbum.ae.fromDate": "Từ ngày",
+  "bannerAlbum.ae.toDate": "Đến ngày",
+  "bannerAlbum.ae.status": "Trạng thái",
+  "bannerAlbum.ae.linkTarget": "Link target",
+
+  "HOME.SELECT": "Ngôn ngữ"
+
+}

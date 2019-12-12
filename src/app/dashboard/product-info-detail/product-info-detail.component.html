@@ -1,0 +1,33 @@
+<div class="modal-image" *ngIf="product">
+
+  <h2>{{product.name | uppercase}}</h2>
+  <div class="thumbnail">
+    <div style="background: white;padding: 2% 2%;"><img src="{{product.image}}" style="width: 20%;height: auto;" alt="#" />
+
+    </div>
+  </div>
+  <div><span>id: </span>{{product.id}}</div>
+  <table class="table table-striped table-sm">
+    <tr class="m-4">
+      <td><label>Tên sản phẩm: </label></td>
+      <td><input [(ngModel)]="product.name" placeholder="name" /></td>
+    </tr>
+
+    <tr class="m-4">
+      <td><label>Giá cũ:</label></td>
+      <td><input [(ngModel)]="product.price" placeholder="price" /></td>
+    </tr>
+    <tr class="m-4">
+      <td><label>Giá mới:</label></td>
+      <td><input [(ngModel)]="product.priceOld" placeholder="priceOld" /></td>
+    </tr>
+
+    <tr class="m-4">
+      <td> <label>Mô tả: </label></td>
+      <td><textarea [(ngModel)]="product.des" placeholder="des" style="width: 180px;height: 100px;"></textarea></td>
+    </tr>
+
+  </table>
+  <button class="btn btn-primary btn-lg " style="margin-right: 30px;" (click)="save()">save</button>
+  <button class="btn btn-primary btn-lg " (click)="goBack()">go back</button>
+</div>

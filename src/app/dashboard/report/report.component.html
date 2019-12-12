@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="col-sm-13 text-center">
+    <h2 class="text-center">Các sản phẩm bán hàng quý 2 -2019</h2>
+    <canvas baseChart
+            [data]="pieChartData"
+            [labels]="pieChartLabels"
+            [chartType]="pieChartType"
+            [options]="pieChartOptions"
+            (chartHover)="chartHovered($event)"
+            (chartClick)="chartClicked($event)"></canvas>
+  </div>
+</div>

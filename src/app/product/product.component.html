@@ -1,0 +1,62 @@
+<div class="album py-5 bg-light">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-4">
+        <div class="list-group" id="list-tab" role="tablist">
+          <a class="list-group-item list-group-item-action active" id="list-home-list" data-toggle="list"
+             href="#list-home" role="tab" aria-controls="home">Nhãn hiệu</a>
+          <a class="list-group-item list-group-item-action" id="list-profile-list" data-toggle="list"
+             href="#list-profile" role="tab" aria-controls="profile" (click)="filter(1)">Adidas</a>
+          <a class="list-group-item list-group-item-action" id="list-messages-list" data-toggle="list"
+             href="#list-messages" role="tab" aria-controls="messages" (click)="filter(2)">Nike</a>
+          <a class="list-group-item list-group-item-action" id="list-settings-list" data-toggle="list"
+             href="#list-settings" role="tab" aria-controls="settings" (click)="filter(3)">Puma</a>
+        </div>
+      </div>
+      <div class="col-8" style="">
+
+          <img style="height: 100%;width:100%;" src="http://www.dfrs-rams.org/includes/templates/dfrs//images/mensbanner2.jpg"/>
+          <!--<div class="container">-->
+            <!--<div class="carousel-caption text-left">-->
+              <!--<h1>50% OFF</h1>-->
+              <!--<p>BLACK PATHEN</p>-->
+              <!--&lt;!&ndash; <p><a class="btn btn-lg btn-primary" href="#" role="button">Chi tiết</a></p> &ndash;&gt;-->
+            <!--</div>-->
+          <!--</div>-->
+
+      </div>
+    </div>
+
+    <div class="row">
+      <h3 style="width: 100%;margin:2% 5%;" class="text-muted">Sản phẩm mới</h3>
+      <div class="col-md-3" *ngFor="let product of products">
+
+        <div class="card mb-4 shadow-sm">
+          <div class="thumbnail">
+            <img src="{{product.image}}" style="width: 100%;height: auto;"/>
+          </div>
+          <div class="card-body">
+            <p class="card-text">{{product.name}}</p>
+            <div class=" d-flex justify-content-between align-items-center">
+              <a class="custom-select-lg">{{product.price| currency:'VND'}}</a>
+              <a style="text-decoration: line-through; color:red;"
+                 class="custom-select-md">{{product.priceOld| currency:'VND'}}</a>
+            </div>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn btn-sm btn-outline-secondary"><a routerLink="/detail/{{product.id}}" style="color: gray;">Chi tiết</a>
+                </button>
+                <button type="button" class="btn btn-sm btn-outline-secondary" (click)="addProduct(product)">Thêm vào
+                  giỏ
+                </button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
